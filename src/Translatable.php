@@ -52,7 +52,7 @@ trait Translatable
      */
     protected function getTranslatedAttribute($key){
         $values = $this->getAttributeValue($key);
-        $locale = Session::get('language');
+        $locale = app()->getLocale();
 
         if(!$values){
             return null;
