@@ -3,7 +3,21 @@ Automatic translation of json multilingual fields for Laravel.
 
 usage:
 
-1) publish the config through php artisan vendor:publish --config.
+1) add the service provider to config/app.php in the "providers" array like this.
+      'providers' => [
+            ...
+            Mmidu\Translatable\TranslatableServiceProvider::class,
+            ...
+      ],     
+   
+   refresh the config cache with the command
+   
+      php artisan config:cache
+   
+   and publish the config file with the command
+   
+      php artisan vendor:publish --provider "Mmidu\Translatable\TranslatableServiceProvider"
+   
 2) use the Translatable trait to the model you want to use it for.
 3) set the languages config in the config/translatable.php file, you can add and remove locales.
 4) the locale used for the translation has to be put in the session.
