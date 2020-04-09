@@ -13,7 +13,7 @@ class TranslatableServiceProvider extends ServiceProvider
             __DIR__.'/../config/translatable.php' => config_path('translatable.php'),
         ], 'translatable.config');
 
-        Session::put('language', config('translatable.default'));
+        app()->setLocale(config('translatable.default'));
     }
 
     public function register()
