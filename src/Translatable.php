@@ -2,8 +2,7 @@
 
 namespace Mmidu\Translatable;
 
-use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\App;
 
 /**
  * Trait Translatable
